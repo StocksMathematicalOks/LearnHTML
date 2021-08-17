@@ -1,0 +1,244 @@
+<html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><style type="text/css">span.iconify, i.iconify, iconify-icon { display: inline-block; width: 1em; }</style>
+    <meta charset="utf-8">
+  
+    <title>...</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+  
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            font-family: Nunito;
+            height:1400px;
+            background: linear-gradient(146.11deg, #5a14ff 20.43%, rgba(255, 255, 255, 0) 79.91%), linear-gradient(202.81deg, #9c09c9 38.99%, rgba(255, 255, 255, 0) 85.2%), #FFB45C;
+        }
+  
+        @keyframes gradient {
+              0% {
+                  background-position: 0% 50%;
+              }
+              50% {
+                  background-position: 100% 50%;
+              }
+              100% {
+                  background-position: 0% 50%;
+              }
+          }
+  .Title{
+    text-align: center;
+  }
+        .btn-general{
+          border: none;
+          background: transparent;
+          background-color: white;
+          outline: none;
+          font-weight: 800;
+          font-family: Nunito;
+          height: 65px;
+          width: 160px;
+          border-radius: 17px;
+        }
+        .ButtonMenu{
+          border: none;
+          background: transparent;
+          background-color: white;
+          outline: none;
+          font-weight: 800;
+          font-family: Nunito;
+          height: 65px;
+          width: 110px;
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          margin-right: 80%;
+          transform: translateY(-500%);
+          -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15); 
+          box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15);
+        }
+  
+        .btn-success {
+          background: linear-gradient(119.32deg, #7BFF2A 16.26%, rgba(255, 255, 255, 0) 67.98%), #59EB00;
+          box-shadow: 0px 1px 20px rgba(99, 255, 105, 0.7);
+          color:white;
+        }
+  
+        .btn-fail {
+          background: linear-gradient(109.45deg, #FF7373 -7.86%, rgba(255, 255, 255, 0) 79.2%), #FF4949;
+          box-shadow: 0px 1px 20px #FF7B7B;
+          color: white;
+        }
+  
+        .bottom-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1em;
+            margin: 20px;
+            align-items: center;
+        }
+  
+        .final-score-title {
+            font-weight: 600;
+        }
+  
+        .final-score-value {
+            font-weight: 800;
+        }
+  
+        .end-text {
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.3);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+  
+        .btn-retry {
+            position: relative;
+            top: 5%;
+        }
+        
+  
+        .iconify {
+            position: absolute;
+            right: 35px;
+            top: 22px;
+        }
+  
+        @media only screen and (max-width: 768px) {
+            #coding-block {
+                max-height: 300px;
+            }
+  
+            .question {
+                font-size: 18px;
+            }
+  
+           .answers-container {
+               grid-template-columns: 1fr;
+               margin: 0;
+               margin-top: 20px;
+           }
+  
+           .btn-general{
+               height: 55px;
+           }
+          .end-text {
+              margin: 0;
+          }
+  
+          .btn-retry {
+              position: absolute;
+              width: 100%;
+              bottom: 0;
+              left: 0;
+          }
+          .btn-general {
+              height: 55px;
+              width: 100%;
+          }
+          .bottom-container {
+              display: block;
+              position: relative;
+          }
+        }
+        .Position1{
+          left:50%;
+          top: 35%;
+          border: none;
+          background: transparent;
+          background-color: white;
+          border-radius: 100px;
+          outline: none;
+          font-weight: 800;
+          font-family: Nunito;
+          height: 65px;
+          -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15); 
+          box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15);
+        }
+        .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+    </style>
+  <script type="text/javascript" src="https://api.iconify.design/akar-icons.js?icons=arrow-right" async="true"></script><meta http-equiv="origin-trial" content="A88otRz1Fd3Nt567e2IYshC18LL3KGVXpVJW9oTCId4RYaygt23pbb4JqrbdIO/bwZPWEmRjBIRBu/bZbDR7Pg4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A0gCLbXCcL0R1Oc8tFPDs0G4Elz17w3zHp+Zst66+D17veE2o7fUcPsA114QtSTRqfVJLMeTSdeWOom0CcyCsgYAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9RQ+LxFazAousxUwSCzaihJjHLO1UyjQp0teZKHl7WdbVjPDfHSKMd6D/ZI5MTjqClFycbl70EFd7cBJWXqKQEAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6WKeWsdn1Ct+ZPqS9NCxxaiBoQ7wdTkK2/gE69Yu0gfBKJfo1gOvgkGmf5/xaIajT/RUb9AbnF1FsSZ47cCcQcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A04ZCu7yjrHgwQJK5ISHhH1DSg0qqowEay3n70KO6wV3D2Mj+OX3Kw20aSMitzgdG1xfrN7sOJV/dZIk+RvCzA4AAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A2YAd4xOntTGygIDjApOTtXOgVI3IWsd5OnOGq3RbRkIQwyqYWNl1JGRAcvtm6VOHDj4n07T/J19VqLuJn3MmQ8AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A2c5Ux+hivdkLh/KbZUGr6f7SCR0mZrBVfPJ+/OuDVHNwiYv+Lo83b9z5qL8sod78bQl0pSLtbvRWURo+xRl7AIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AzNJ4sd3tVurolpdvWYZ4cmP9Po7RJhEHSqmC3pgxW9fFVZvchhtcMUgHAs97npxMD1jhXHO8s6q6Wy1MMLxKgEAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="preload" href="https://adservice.google.co.uk/adsid/integrator.js?domain=guessthiscode.com" as="script"><script type="text/javascript" src="https://adservice.google.co.uk/adsid/integrator.js?domain=guessthiscode.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=guessthiscode.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=guessthiscode.com"></script></head>
+  <body>
+      <div class="main-container">
+          <div class="points-container">
+              <big><h1 class="Title">...</h1></big>
+          </div>
+              <h3 class="question">...</h3>
+              <button class="btn-general btn-answers btn0"onclick="window.open('.html', '_blank');">...</button>
+              <br><br>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="btn-general btn-answers btn0">...</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">GitHub</a>
+                </div>
+              </div>
+      <script>
+        document.getElementById('buttonid').addEventListener('click', openDialog);
+  
+  function openDialog() {
+    document.getElementById('fileid').click();
+  }
+  function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>
+</html>
